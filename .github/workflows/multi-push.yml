@@ -32,6 +32,7 @@ jobs:
 
 
     test_jobs_2:
+        needs: first_job_1
         runs-on: ubuntu-latest
         steps:
             - name: sleep for 10 sec
@@ -42,6 +43,7 @@ jobs:
 
 
     test_jobs_3:
+        needs: test_jobs_2
         runs-on: ubntu-latest
         steps:
             - name: Read file
