@@ -12,7 +12,7 @@ jobs:
             #  run: echo "myfirst giworkflow"
 
             - name : list and read file
-              run:
+              run:  |
                 echo "MY first GITHB action JOB"
                 ls -ltra
                 cat README.md
