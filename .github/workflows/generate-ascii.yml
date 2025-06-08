@@ -18,7 +18,7 @@ jobs:
 
             - name: execute shell script
               run: 
-                chmod +x ascii-scipt.sh
-                ./ascii-scipt.sh
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
 
 
