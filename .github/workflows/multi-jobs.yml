@@ -1,0 +1,51 @@
+name: firstwork flow
+
+on: push
+
+jobs: 
+    first_job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4.2.2
+            #- name: Welcome message
+            #  run: echo "myfirst giworkflow"
+
+            - name : list and read file
+              run:  |
+                echo "MY first GITHB action JOB"
+                ls -ltra
+                cat README.md
+
+            - name: Install cowsay program
+              run: sudo apt-get install cowsay -y
+
+            
+            - name : Geneerate ASCII artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON ............RAWR" >> dragon.txt
+
+            - name: sleep for 30 seconds
+              run: sleep 30
+
+
+    test_jobs_2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: sleep for 10 sec
+              run: sleep 10
+
+            - name: Test File exists
+              run: grep -i "dragon" dragon.txt
+
+
+    test_jobs_3:
+        runs-on: ubntu-latest
+        steps:
+            - name: Read file
+              run: cat dragon.txt
+
+            - name: Deploy
+              run: echo Deploying .......................................
+
+              
+              
