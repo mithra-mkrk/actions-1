@@ -58,10 +58,13 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: dragon-txt-file  
+            
                 
+            - name: Test File exists
+              run: grep -i "dragon" dragon.txt
                 
-            - name: Read file
-              run: cat dragon.txt
+            #- name: Read file
+            #  run: cat dragon.txt
 
             - name: Deploy
               run: echo Deploying .......................................
