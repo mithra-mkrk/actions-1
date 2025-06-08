@@ -24,6 +24,9 @@ jobs:
             - name : Geneerate ASCII artwork
               run: cowsay -f dragon "Run for cover, I am a DRAGON ............RAWR" >> dragon.txt
 
+            - name : read the file 
+              run: ls -ltra
+
             - name: sleep for 30 seconds
               run: sleep 30
 
