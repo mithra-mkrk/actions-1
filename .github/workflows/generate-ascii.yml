@@ -1,7 +1,8 @@
 name: generate-ascii
- on : push
+ on:
+  push
 
- jobs:
+jobs:
     ascii_job:
         runs-on: ubuntu-latest
         steps:
