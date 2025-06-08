@@ -27,16 +27,23 @@ jobs:
             - name : read the file 
               run: ls -ltra
 
-            - name: sleep for 30 seconds
-              run: sleep 30
+            - name: upload dragon text file
+              uses: actions/upload-artifact@v4
+              with:
+                name: dragon-txt-file
+                path: dragon.txt
 
 
     test_jobs_2:
         needs: first_job_1
         runs-on: ubuntu-latest
         steps:
-            - name: sleep for 10 sec
-              run: sleep 10
+
+            - name: download dragon text file
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon-txt-file
+                
 
             - name: Test File exists
               run: grep -i "dragon" dragon.txt
@@ -46,6 +53,13 @@ jobs:
         needs: test_jobs_2
         runs-on: ubntu-latest
         steps:
+
+            - name: download dragon text file
+              uses: actions/download-artifact@v4
+              with:
+                name: dragon-txt-file  
+                
+                
             - name: Read file
               run: cat dragon.txt
 
