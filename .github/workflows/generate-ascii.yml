@@ -23,4 +23,7 @@ name: generate-ascii
             - name: checkout repo files
               run: ls -ltra
 
+            - name: checkout repo2 files
+              run: ls -ltra
+
 
