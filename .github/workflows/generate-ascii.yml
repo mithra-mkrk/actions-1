@@ -4,7 +4,7 @@ on:
 
 jobs:
     ascii_job:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - name: checkout Repo
               uses: actions/checkout@v4.2.2
