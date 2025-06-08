@@ -1,4 +1,4 @@
-name: firstwork flow
+name: mutli job workflow
 
 on: push
 
