@@ -3,7 +3,7 @@ on:
   push
 
 jobs:
-    ascii_job:
+    ascii_job_1:
         runs-on: ubuntu-latest
         steps:
             - name: checkout Repo
@@ -20,5 +20,7 @@ jobs:
               run: chmod +x ascii-script.sh && ./ascii-script.sh
                 #chmod +x ascii-script.sh
                # ./ascii-script.sh
+
+
 
 
